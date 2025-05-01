@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Home, User, FileText, DollarSign, Bell, CheckCircle } from "lucide-react"; // Ikon untuk sidebar
+import { Home, User, FileText, DollarSign, Bell, CheckCircle } from "lucide-react";
 
 const Sidebar = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -10,7 +10,7 @@ const Sidebar = () => {
   // Daftar menu sidebar dengan ikon
   const menuItems = [
     { icon: <Home />, label: "Home", href: "/home" },
-    { icon: <User />, label: "Biodata", href: "/Biodata" },
+    { icon: <User />, label: "Biodata", href: "/create/biodata" },
     { icon: <FileText />, label: "Berkas", href: "/berkas" },
     { icon: <DollarSign />, label: "Biaya Pendaftaran", href: "/biaya" },
     { icon: <Bell />, label: "Pengumuman", href: "/pengumuman" },
@@ -21,21 +21,31 @@ const Sidebar = () => {
     <div
       className={`fixed top-0 left-0 h-screen ${
         isHovered ? "w-64" : "w-16"
-      } bg-gray-800 text-white transition-all duration-300 ease-in-out z-50`}
+      } bg-gray-800 text-white transition-all duration-300 ease-in-out z-50 overflow-hidden`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       {/* Header */}
-      <div className="p-4 text-lg font-bold border-b border-gray-700 flex items-center justify-center">
+      <div className="p-4 text-lg font-bold border-b border-gray-700 flex items-center justify-center whitespace-nowrap">
         {isHovered ? "Menu Navigasi" : "MN"} {/* Singkatan saat sidebar mengecil */}
       </div>
+
       {/* Menu */}
       <nav className="mt-4">
         <ul>
           {menuItems.map((item, index) => (
-            <li key={index} className="flex items-center p-4 hover:bg-gray-700">
-              <span className="mr-4">{item.icon}</span>
-              {isHovered && <Link href={item.href}>{item.label}</Link>}
+            <li
+              key={index}
+              className="flex items-center p-4 hover:bg-gray-700 whitespace-nowrap transition-all duration-200 transform hover:translate-x-2"
+            >
+              <span className="mr-4 flex-shrink-0">{item.icon}</span>
+              <span
+                className={`transition-opacity duration-300 ${
+                  isHovered ? "opacity-100" : "opacity-0 w-0 overflow-hidden"
+                }`}
+              >
+                <Link href={item.href}>{item.label}</Link>
+              </span>
             </li>
           ))}
         </ul>

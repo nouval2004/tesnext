@@ -1,3 +1,4 @@
+// tailwind.config.js
 import type { Config } from "tailwindcss";
 const { default: flattenColorPalette } = require("tailwindcss/lib/util/flattenColorPalette");
 
@@ -6,7 +7,11 @@ export default {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}", // Tambahkan jika menggunakan Pages Router
+    "./components/**/*.{js,ts,jsx,tsx,mdx}", // Tambahkan jika komponen ada di folder components
+    "./app/**/*.{js,ts,jsx,tsx,mdx}", // Tambahkan jika menggunakan App Router
   ],
+  darkMode: 'selector', // Menggunakan data-theme="dark"
   theme: {
     extend: {
       colors: {

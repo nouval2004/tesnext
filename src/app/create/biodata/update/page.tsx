@@ -79,11 +79,11 @@ export default function UpdateBiodataPage() {
 
   return (
     <div className="flex-col items-center">
-      <div className="mb-6 text-center">
+      <div className="mb-6 max-w-7xl mx-auto text-left">
         <h2 className="text-4xl font-bold text-gray-800 dark:text-gray-200">
           Formulir Pengisian Biodata Calon Santri
         </h2>
-        <p className="text-gray-600 dark:text-gray-400 mt-2">
+        <p className="italic text-gray-600 dark:text-gray-400 mt-2">
           Pastikan semua data diisi dengan benar sebelum disimpan.
         </p>
       </div>

@@ -11,8 +11,8 @@ const Sidebar = () => {
   const menuItems = [
     { icon: <Home />, label: "Home", href: "/home" },
     { icon: <User />, label: "Biodata", href: "/create/biodata" },
-    { icon: <FileText />, label: "Berkas", href: "/berkas" },
-    { icon: <DollarSign />, label: "Biaya Pendaftaran", href: "/biaya" },
+    { icon: <FileText />, label: "Berkas", href: "/create/berkas" },
+    { icon: <DollarSign />, label: "Biaya Pendaftaran", href: "/create/biaya" },
     { icon: <Bell />, label: "Pengumuman", href: "/pengumuman" },
     { icon: <CheckCircle />, label: "Daftar Ulang", href: "/daftar-ulang" },
   ];

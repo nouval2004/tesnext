@@ -39,7 +39,7 @@ export default function BerkasPage() {
 
   if (!berkas || !Object.values(berkas).some((file) => file && typeof file === 'object' && 'name' in file)) {
     return (
-      <div className="max-w-2xl mx-auto p-4 bg-white dark:bg-gray-800 shadow-md rounded-lg">
+      <div className="max-w-xl mx-auto p-4 bg-white dark:bg-gray-800 shadow-md rounded-lg">
         <h1 className="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-4">Pengumpulan Berkas</h1>
         <p className="text-gray-600 dark:text-gray-400">Belum ada berkas yang diunggah.</p>
         <Link href="/create/berkas/update">

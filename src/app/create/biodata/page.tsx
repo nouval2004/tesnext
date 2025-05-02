@@ -69,90 +69,167 @@ export default function BiodataPage() {
 
   if (!biodata) {
     return (
-      <div className="max-w-2xl mx-auto p-4 bg-white shadow-md rounded-lg">
-        <h1 className="text-2xl font-bold mb-4">Biodata</h1>
-        <p className="text-gray-500">Belum ada data biodata.</p>
+      <div className="max-w-2xl mx-auto p-4 bg-white dark:bg-gray-800 shadow-md rounded-lg">
+        <h1 className="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-4">Biodata</h1>
+        <p className="text-gray-600 dark:text-gray-400">Belum ada data biodata.</p>
         <Link href="/create/biodata/update">
-          <button className="mt-4 bg-blue-500 text-white p-2 rounded">Isi Biodata</button>
+          <button className="mt-4 bg-blue-500 text-white p-2 rounded hover:bg-blue-600 dark:hover:bg-blue-700">
+            Isi Biodata
+          </button>
         </Link>
       </div>
     );
   }
 
   return (
-    <div className="max-w-2xl mx-auto p-4 bg-white shadow-md rounded-lg">
-      <h1 className="text-2xl font-bold mb-4">Biodata</h1>
-      <h2 className="text-lg font-semibold text-blue-600">Data Calon Santri</h2>
+    <div className="max-w-2xl mx-auto p-4 bg-white dark:bg-gray-800 shadow-md rounded-lg">
+      <h1 className="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-4">Biodata</h1>
+      <h2 className="text-lg font-semibold text-blue-600 dark:text-blue-400">Data Calon Santri</h2>
       <div className="grid grid-cols-2 gap-4 mb-6">
         <div>
-          <label className="block text-gray-600">Nama Lengkap</label>
-          <p>{biodata.calonSantri.namaLengkap}</p>
+          <label className="block text-gray-600 dark:text-gray-400">Nama Lengkap</label>
+          <p className="text-gray-900 dark:text-gray-100">{biodata.calonSantri.namaLengkap}</p>
         </div>
         <div>
-          <label className="block text-gray-600">Tempat Lahir</label>
-          <p>{biodata.calonSantri.tempatLahir}</p>
+          <label className="block text-gray-600 dark:text-gray-400">Tempat Lahir</label>
+          <p className="text-gray-900 dark:text-gray-100">{biodata.calonSantri.tempatLahir}</p>
         </div>
         <div>
-          <label className="block text-gray-600">Tanggal Lahir</label>
-          <p>{biodata.calonSantri.tanggalLahir}</p>
+          <label className="block text-gray-600 dark:text-gray-400">Tanggal Lahir</label>
+          <p className="text-gray-900 dark:text-gray-100">{biodata.calonSantri.tanggalLahir}</p>
         </div>
         <div>
-          <label className="block text-gray-600">NISN</label>
-          <p>{biodata.calonSantri.nisn}</p>
+          <label className="block text-gray-600 dark:text-gray-400">NISN</label>
+          <p className="text-gray-900 dark:text-gray-100">{biodata.calonSantri.nisn}</p>
         </div>
         <div>
-          <label className="block text-gray-600">Asal Sekolah</label>
-          <p>{biodata.calonSantri.asalSekolah}</p>
+          <label className="block text-gray-600 dark:text-gray-400">Asal Sekolah</label>
+          <p className="text-gray-900 dark:text-gray-100">{biodata.calonSantri.asalSekolah}</p>
         </div>
         <div>
-          <label className="block text-gray-600">Alamat Sekolah Asal</label>
-          <p>{biodata.calonSantri.alamatSekolahAsal}</p>
+          <label className="block text-gray-600 dark:text-gray-400">Alamat Sekolah Asal</label>
+          <p className="text-gray-900 dark:text-gray-100">{biodata.calonSantri.alamatSekolahAsal}</p>
         </div>
         <div className="col-span-2">
-          <label className="block text-gray-600">Alamat Tinggal</label>
-          <p>{biodata.calonSantri.alamatTinggal}</p>
+          <label className="block text-gray-600 dark:text-gray-400">Alamat Tinggal</label>
+          <p className="text-gray-900 dark:text-gray-100">{biodata.calonSantri.alamatTinggal}</p>
         </div>
       </div>
 
-      <h2 className="text-lg font-semibold text-blue-600">Data Ayah</h2>
+      <h2 className="text-lg font-semibold text-blue-600 dark:text-blue-400">Data Ayah</h2>
       <div className="grid grid-cols-2 gap-4 mb-6">
         <div>
-          <label className="block text-gray-600">Nama</label>
-          <p>{biodata.ayah.nama}</p>
+          <label className="block text-gray-600 dark:text-gray-400">Nama</label>
+          <p className="text-gray-900 dark:text-gray-100">{biodata.ayah.nama}</p>
         </div>
         <div>
-          <label className="block text-gray-600">Tempat Lahir</label>
-          <p>{biodata.ayah.tempatLahir}</p>
+          <label className="block text-gray-600 dark:text-gray-400">Tempat Lahir</label>
+          <p className="text-gray-900 dark:text-gray-100">{biodata.ayah.tempatLahir}</p>
         </div>
         <div>
-          <label className="block text-gray-600">Tanggal Lahir</label>
-          <p>{biodata.ayah.tanggalLahir}</p>
+          <label className="block text-gray-600 dark:text-gray-400">Tanggal Lahir</label>
+          <p className="text-gray-900 dark:text-gray-100">{biodata.ayah.tanggalLahir}</p>
         </div>
         <div>
-          <label className="block text-gray-600">Nomor WhatsApp</label>
-          <p>{biodata.ayah.whatsapp}</p>
+          <label className="block text-gray-600 dark:text-gray-400">Nomor WhatsApp</label>
+          <p className="text-gray-900 dark:text-gray-100">{biodata.ayah.whatsapp}</p>
         </div>
         <div className="col-span-2">
-          <label className="block text-gray-600">Alamat</label>
-          <p>{biodata.ayah.alamat}</p>
+          <label className="block text-gray-600 dark:text-gray-400">Alamat</label>
+          <p className="text-gray-900 dark:text-gray-100">{biodata.ayah.alamat}</p>
         </div>
         <div>
-          <label className="block text-gray-600">Pendidikan Terakhir</label>
-          <p>{biodata.ayah.pendidikanTerakhir}</p>
+          <label className="block text-gray-600 dark:text-gray-400">Pendidikan Terakhir</label>
+          <p className="text-gray-900 dark:text-gray-100">{biodata.ayah.pendidikanTerakhir}</p>
         </div>
         <div>
-          <label className="block text-gray-600">Pekerjaan</label>
-          <p>{biodata.ayah.pekerjaan}</p>
+          <label className="block text-gray-600 dark:text-gray-400">Pekerjaan</label>
+          <p className="text-gray-900 dark:text-gray-100">{biodata.ayah.pekerjaan}</p>
         </div>
         <div>
-          <label className="block text-gray-600">Penghasilan</label>
-          <p>{biodata.ayah.penghasilan}</p>
+          <label className="block text-gray-600 dark:text-gray-400">Penghasilan</label>
+          <p className="text-gray-900 dark:text-gray-100">{biodata.ayah.penghasilan}</p>
         </div>
       </div>
 
-      {/* Data Ibu dan Wali serupa dengan Data Ayah */}
+      {/* Data Ibu */}
+      <h2 className="text-lg font-semibold text-blue-600 dark:text-blue-400">Data Ibu</h2>
+      <div className="grid grid-cols-2 gap-4 mb-6">
+        <div>
+          <label className="block text-gray-600 dark:text-gray-400">Nama</label>
+          <p className="text-gray-900 dark:text-gray-100">{biodata.ibu.nama}</p>
+        </div>
+        <div>
+          <label className="block text-gray-600 dark:text-gray-400">Tempat Lahir</label>
+          <p className="text-gray-900 dark:text-gray-100">{biodata.ibu.tempatLahir}</p>
+        </div>
+        <div>
+          <label className="block text-gray-600 dark:text-gray-400">Tanggal Lahir</label>
+          <p className="text-gray-900 dark:text-gray-100">{biodata.ibu.tanggalLahir}</p>
+        </div>
+        <div>
+          <label className="block text-gray-600 dark:text-gray-400">Nomor WhatsApp</label>
+          <p className="text-gray-900 dark:text-gray-100">{biodata.ibu.whatsapp}</p>
+        </div>
+        <div className="col-span-2">
+          <label className="block text-gray-600 dark:text-gray-400">Alamat</label>
+          <p className="text-gray-900 dark:text-gray-100">{biodata.ibu.alamat}</p>
+        </div>
+        <div>
+          <label className="block text-gray-600 dark:text-gray-400">Pendidikan Terakhir</label>
+          <p className="text-gray-900 dark:text-gray-100">{biodata.ibu.pendidikanTerakhir}</p>
+        </div>
+        <div>
+          <label className="block text-gray-600 dark:text-gray-400">Pekerjaan</label>
+          <p className="text-gray-900 dark:text-gray-100">{biodata.ibu.pekerjaan}</p>
+        </div>
+        <div>
+          <label className="block text-gray-600 dark:text-gray-400">Penghasilan</label>
+          <p className="text-gray-900 dark:text-gray-100">{biodata.ibu.penghasilan}</p>
+        </div>
+      </div>
+
+      {/* Data Wali */}
+      <h2 className="text-lg font-semibold text-blue-600 dark:text-blue-400">Data Wali</h2>
+      <div className="grid grid-cols-2 gap-4 mb-6">
+        <div>
+          <label className="block text-gray-600 dark:text-gray-400">Nama</label>
+          <p className="text-gray-900 dark:text-gray-100">{biodata.wali.nama}</p>
+        </div>
+        <div>
+          <label className="block text-gray-600 dark:text-gray-400">Tempat Lahir</label>
+          <p className="text-gray-900 dark:text-gray-100">{biodata.wali.tempatLahir}</p>
+        </div>
+        <div>
+          <label className="block text-gray-600 dark:text-gray-400">Tanggal Lahir</label>
+          <p className="text-gray-900 dark:text-gray-100">{biodata.wali.tanggalLahir}</p>
+        </div>
+        <div>
+          <label className="block text-gray-600 dark:text-gray-400">Nomor WhatsApp</label>
+          <p className="text-gray-900 dark:text-gray-100">{biodata.wali.whatsapp}</p>
+        </div>
+        <div className="col-span-2">
+          <label className="block text-gray-600 dark:text-gray-400">Alamat</label>
+          <p className="text-gray-900 dark:text-gray-100">{biodata.wali.alamat}</p>
+        </div>
+        <div>
+          <label className="block text-gray-600 dark:text-gray-400">Pendidikan Terakhir</label>
+          <p className="text-gray-900 dark:text-gray-100">{biodata.wali.pendidikanTerakhir}</p>
+        </div>
+        <div>
+          <label className="block text-gray-600 dark:text-gray-400">Pekerjaan</label>
+          <p className="text-gray-900 dark:text-gray-100">{biodata.wali.pekerjaan}</p>
+        </div>
+        <div>
+          <label className="block text-gray-600 dark:text-gray-400">Penghasilan</label>
+          <p className="text-gray-900 dark:text-gray-100">{biodata.wali.penghasilan}</p>
+        </div>
+      </div>
+
       <Link href="/create/biodata/update">
-        <button className="bg-blue-500 text-white p-2 rounded">Update Biodata</button>
+        <button className="bg-blue-500 text-white p-2 rounded hover:bg-blue-600 dark:hover:bg-blue-700">
+          Update Biodata
+        </button>
       </Link>
     </div>
   );

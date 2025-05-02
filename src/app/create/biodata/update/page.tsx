@@ -78,9 +78,19 @@ export default function UpdateBiodataPage() {
   };
 
   return (
-    <div className="max-w-7xl mx-auto p-6 bg-white dark:bg-gray-800 shadow-md rounded-lg">
-      <h1 className="text-2xl font-bold mb-2 text-blue-600 dark:text-blue-400">Update Biodata</h1>
-      <p className="text-gray-600 dark:text-gray-300 mb-6">
+    <div className="flex-col items-center">
+      <div className="mb-6 text-center">
+        <h2 className="text-4xl font-bold text-gray-800 dark:text-gray-200">
+          Formulir Pengisian Biodata Calon Santri
+        </h2>
+        <p className="text-gray-600 dark:text-gray-400 mt-2">
+          Pastikan semua data diisi dengan benar sebelum disimpan.
+        </p>
+      </div>
+
+    <div className="max-w-7xl mx-auto p-6 bg-white dark:bg-gray-800 shadow-2xl rounded-lg">
+      <h1 className="text-2xl font-medium mb-2 text-black dark:text-blue-400">Update Biodata</h1>
+      <p className="italic text-gray-600 dark:text-gray-300 mb-6">
         Silahkan isi data diri anda dengan lengkap dan benar, kekeliruan dalam pengisian dapat membuat anda tidak lulus verifikasi data.
       </p>
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
@@ -514,5 +524,6 @@ export default function UpdateBiodataPage() {
         </button>
       </form>
     </div>
+  </div>
   );
 }

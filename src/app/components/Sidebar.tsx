@@ -9,7 +9,7 @@ const Sidebar = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   const menuItems = [
-    { icon: <Home />, label: "Home", href: "/home" },
+    { icon: <Home />, label: "Home", href: "/create/home" },
     { icon: <User />, label: "Biodata", href: "/create/biodata" },
     { icon: <FileText />, label: "Berkas", href: "/create/berkas" },
     { icon: <DollarSign />, label: "Biaya Pendaftaran", href: "/create/biaya" },

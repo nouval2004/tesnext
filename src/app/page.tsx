@@ -1,14 +1,17 @@
+// app/page.tsx
 import { AuroraBackground } from "@/app/components/ui/aurora-background";
 import { FloatingNav } from "@/app/components/ui/floating-navbar";
 import { Carousel } from "@/app/components/ui/carousel";
 import { ContainerScroll } from "./components/ui/container-scroll-animation";
-import Navbar from "@/app/components/Navbar"; // Import Navbar
+import Navbar from "@/app/components/Navbar";
 
 export default function Home() {
   const navItems = [
     { name: "Home", link: "/" },
     { name: "About", link: "/about" },
     { name: "Contact", link: "/contact" },
+    { name: "Login", link: "/create/login" },
+    { name: "Signup", link: "/create/signup" },
   ];
 
   const slides = [
@@ -32,7 +35,7 @@ export default function Home() {
   return (
     <>
       <div className="w-screen overflow-hidden">
-        {/* Tambahkan Navbar hanya di halaman Home */}
+        {/* Navbar Utama */}
         <Navbar />
 
         <AuroraBackground>
@@ -54,10 +57,10 @@ export default function Home() {
           <ContainerScroll
             titleComponent={
               <div className="text-center">
-                <h2 className="text-6xl font-semibold text-white">
+                <h2 className="text-6xl font-semibold text-white dark:text-gray-200">
                   Explore Dynamic Effects
                 </h2>
-                <p className="mt-4 text-xl text-gray-400">
+                <p className="mt-4 text-xl text-gray-400 dark:text-gray-300">
                   Discover how dynamic scrolling can bring your UI to life.
                 </p>
               </div>
